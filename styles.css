@@ -1149,3 +1149,17 @@ video{
 	}
 }
 /*# sourceMappingURL=main.4a56f61b.chunk.css.map */
+
+
+.text-content-text{
+	max-width: 50%;
+	margin-right: 20px;
+}
+
+@media screen and (max-width: 768px){
+	.text-content-text{
+		max-width: 100%;
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+}

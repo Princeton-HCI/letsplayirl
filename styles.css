@@ -1156,6 +1156,39 @@ video{
 	margin-right: 20px;
 }
 
+.game-page.video-section iframe{
+	visibility: hidden;
+}
+
+.game-page__video.video-tutorial{
+	width: 800px !important;
+	height: 500px !important;
+	max-width: unset;
+	max-height: unset;
+}
+
+.game-page__video.video-tutorial video{
+	width: 100% !important;
+	height: 100% !important;
+}
+@media screen and (max-width: 1100px){
+	.game-page__video.video-tutorial video{
+		min-width: 100% !important;
+		min-height: 100% !important;
+	}
+	.game-page__video.video-tutorial{
+		min-width: 100% !important;
+		min-height: 100% !important;
+		width: 100% !important;
+		height: 100% !important;
+		max-width: 100%;
+		max-height: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
 @media screen and (max-width: 768px){
 	.text-content-text{
 		max-width: 100%;

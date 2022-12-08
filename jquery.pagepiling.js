@@ -246,10 +246,11 @@
                 leavingSection: $('.pp-section.active').index('.pp-section') + 1
             };
             if(typeof v.anchorLink !== 'undefined'){
-
+                console.log(v.anchorLink)
                 //quiting when activeSection is the target element
                 if(v.activeSection.is(destination)){
                     v.destination.find("video").css('visibility','visible');
+                    v.destination.find("iframe").css('visibility','visible');
                     v.destination.find("video").get(0).play();
                     return;
                 }
@@ -270,6 +271,7 @@
                 //scrolling down (moving sections up making them disappear)
                 if (v.yMovement === 'down') {
                     v.scrolling = '-100%';
+                    console.log(v.scrolling)
 
                     if(!options.css3){
                         v.sectionsToMove.each(function(index){
@@ -288,7 +290,7 @@
                 //scrolling up (moving section down to the viewport)
                 else {
                     v.scrolling = '0';
-
+                    console.log(v.scrolling)
                     v.animateSection = destination;
                     $.isFunction(options.onLeave) && options.onLeave.call(this, v.leavingSection, (v.sectionIndex + 1), v.yMovement);
 
@@ -319,6 +321,7 @@
                 v.animateSection.find("video").get(0).pause();
                 v.animateSection.find("video").get(0).currentTime = 0;
                 v.destination.find("video").css('visibility','visible');
+                v.destination.find("iframe").css('visibility','visible');
                 transformContainer(v.animateSection, v.translate3d, v.animated);
                 v.animateSection.removeClass('ease-fast');
                 v.sectionsToMove.each(function(){
@@ -340,6 +343,7 @@
                 });
                 setTimeout(function(){
                     v.animateSection.find("video").css('visibility','hidden');
+                    v.animateSection.find("iframe").css('visibility','hidden');
                     $('.spacer').css('visibility', 'visible');
                 },50);
                 setTimeout(function(){
@@ -398,6 +402,7 @@
                 v.activeSection.find("video").get(0).pause();
                 v.activeSection.find("video").get(0).currentTime = 0;
                 v.destination.find("video").css('visibility','visible');
+                v.destination.find("iframe").css('visibility','visible');
                 v.destination.addClass('ease-fast');
                 transformContainer(v.destination, v.translate3d, v.animated);
                 v.sectionsToMove.each(function(){
@@ -414,11 +419,13 @@
                 });
                 setTimeout(function(){
                     v.activeSection.find("video").css('visibility','hidden');
+                    v.activeSection.find("iframe").css('visibility','hidden');
                 },50);
                 setTimeout(function(){
                     v.destination.find("video").get(0).play();
                     v.destination.removeClass('ease-fast');
                     var indexMoved = v.sectionsMoved.length;
+                    console.log(indexMoved)
                     transformContainer(v.destination, 'translate3d(0px, ' + yAxis + 'vh, -' + zAxis + 'px) scaleX(' + scale + ')', v.animated);
                     v.destination.attr('data-order', zAxis);
                     v.sectionsToMove.each(function(){

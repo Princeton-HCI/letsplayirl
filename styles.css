@@ -433,6 +433,9 @@ video{
 	}
 }
 @media screen and (max-width:768px) {
+	.text-content__content iframe{
+		max-width: 100%;
+	}
 	.game-page {
 		position: absolute;
 		width: 100vw;
@@ -468,8 +471,6 @@ video{
 		overflow: hidden
 	}
 	.game-page__video video {
-		min-width: 100%;
-		min-height: 100%;
 		border-radius: 10px;
 		border: 10px #000
 	}
@@ -1177,8 +1178,8 @@ video{
 }
 @media screen and (max-width: 1100px){
 	.game-page__video.video-tutorial video{
-		min-width: 100% !important;
-		min-height: 100% !important;
+		width: 90% !important;
+		height: 100% !important;
 	}
 	.game-page__video.video-tutorial{
 		min-width: 100% !important;

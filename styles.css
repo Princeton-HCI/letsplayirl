@@ -10,7 +10,6 @@ a{
 }
 
 /*!*FONTS OPEN*!*/
-
 /*!*FONTS CLOSE*!*/
 
 body {
@@ -868,6 +867,9 @@ video{
 	text-transform: uppercase
 }
 @media screen and (max-width:768px) {
+	.about-page .text-content{
+		overflow-y: scroll;
+	}
 	.text-content {
 		-ms-flex-direction: column;
 		flex-direction: column;
@@ -882,7 +884,8 @@ video{
 		letter-spacing: .27px
 	}
 	.text-content__content {
-		width: 100%
+		width: 100%;
+		overflow-y: unset;
 	}
 }
 .about-page {
@@ -1154,6 +1157,7 @@ video{
 .text-content-text{
 	max-width: 50%;
 	margin-right: 20px;
+	font-family: 'Montserrat';
 }
 
 .game-page.video-section iframe{

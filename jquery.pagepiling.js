@@ -314,7 +314,7 @@
                 var index = v.sectionIndex - v.activeIndex;
                 var indexMoved = v.sectionsMoved.length;
                 const yAxis = 9 - index*.75;
-                const zAxis = 11 - index;
+                const zAxis = 12 - index;
                 const scale = 0.824 + index*0.016;
                 $('.spacer').css('visibility', 'hidden');
                 v.animateSection.find("video").get(0).pause();

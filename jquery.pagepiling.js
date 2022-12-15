@@ -41,7 +41,7 @@
                 tooltips: []
             },
             normalScrollElements: null,
-            normalScrollElementTouchThreshold: 11,
+            normalScrollElementTouchThreshold: 10,
             touchSensitivity: 10,
             keyboardScrolling: true,
             sectionSelector: '.section',
@@ -333,7 +333,7 @@
                 });
                 v.sectionsMoved.each(function(){
                     const yAxis = (9 - index*.75) - indexMoved*.75;
-                    const zAxis = (11 - index) - indexMoved;
+                    const zAxis = (12 - index) - indexMoved;
                     const scale = (0.824 + index*0.016) + indexMoved*0.016;
                     transformContainer($(this), 'translate3d(0px, ' + yAxis + 'vh, -' + zAxis + 'px) scaleX(' + scale + ')', v.animated);
                     $(this).attr('data-order', zAxis);
@@ -352,7 +352,7 @@
                         $(this).addClass('ease-fast');
                         index = index - 1;
                         const yAxis = 9 - index*.75;
-                        const zAxis = 11 - index;
+                        const zAxis = 12 - index;
                         const scale = 0.824 + index*0.016;
                         transformContainer($(this), 'translate3d(0px, ' + yAxis + 'vh, -' + zAxis + 'px) scaleX(' + scale + ')', v.animated);
                         $(this).attr('data-order', zAxis);
@@ -407,7 +407,7 @@
                 });
                 v.sectionsMoved.each(function(){
                     const yAxis = 9 - indexMoved*.75;
-                    const zAxis = 11 - indexMoved;
+                    const zAxis = 12 - indexMoved;
                     const scale = 0.824 + indexMoved*0.016;
                     transformContainer($(this), 'translate3d(0px, ' + yAxis + 'vh, -' + zAxis + 'px) scaleX(' + scale + ')', v.animated);
                     $(this).attr('data-order', zAxis);
@@ -427,7 +427,7 @@
                         $(this).removeClass('ease-fast');
                         index = index - 1;
                         const yAxis = (9 - indexMoved*.75) - index*.75;
-                        const zAxis = (11 - indexMoved) - index;
+                        const zAxis = (12 - indexMoved) - index;
                         const scale = (0.824 + indexMoved*0.016) + index*0.016;
                         transformContainer($(this), 'translate3d(0px, ' + yAxis + 'vh, -' + zAxis + 'px) scaleX(' + scale + ')', v.animated);
                         $(this).attr('data-order', zAxis);

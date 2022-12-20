@@ -20,6 +20,9 @@ body {
 video{
 	visibility: hidden;
 }
+iframe{
+	visibility: hidden;
+}
 .spacer{
 	width: 100%;
 	position: absolute;
@@ -1173,20 +1176,21 @@ video{
 	max-height: unset;
 }
 
-.game-page__video.video-tutorial video{
+.game-page__video.video-tutorial iframe{
 	width: 100% !important;
 	height: 100% !important;
 }
 @media screen and (max-width: 1100px){
-	.game-page__video.video-tutorial video{
+	.game-page__video.video-tutorial iframe{
 		width: 90% !important;
 		height: 100% !important;
 	}
+	
 	.game-page__video.video-tutorial{
 		min-width: 100% !important;
-		min-height: 100% !important;
+		/* min-height: 100% !important; */
 		width: 100% !important;
-		height: 100% !important;
+		height: 300px !important;
 		max-width: 100%;
 		max-height: 100%;
 		position: absolute;

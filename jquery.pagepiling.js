@@ -175,17 +175,14 @@
 
             //if no active section is defined, the 1st one will be the default one
             if (!index && $('.pp-section.active').length === 0) {
-                console.log('no active defined', this)
                 $(this).addClass('active');
             }
 
             if (typeof options.anchors[index] !== 'undefined') {
-                console.log('index', index)
                 $(this).attr('data-anchor', options.anchors[index]);
             }
 
             if (typeof options.sectionsColor[index] !== 'undefined') {
-                console.log('index', index)
                 $(this).css('background-color', options.sectionsColor[index]);
             }
 
@@ -246,7 +243,6 @@
                 leavingSection: $('.pp-section.active').index('.pp-section') + 1
             };
             if(typeof v.anchorLink !== 'undefined'){
-                console.log(v.anchorLink)
                 //quiting when activeSection is the target element
                 if(v.activeSection.is(destination)){
                     v.destination.find("video").css('visibility','visible');
@@ -271,7 +267,6 @@
                 //scrolling down (moving sections up making them disappear)
                 if (v.yMovement === 'down') {
                     v.scrolling = '-100%';
-                    console.log(v.scrolling)
 
                     if(!options.css3){
                         v.sectionsToMove.each(function(index){
@@ -290,7 +285,6 @@
                 //scrolling up (moving section down to the viewport)
                 else {
                     v.scrolling = '0';
-                    console.log(v.scrolling)
                     v.animateSection = destination;
                     $.isFunction(options.onLeave) && options.onLeave.call(this, v.leavingSection, (v.sectionIndex + 1), v.yMovement);
 
@@ -425,7 +419,6 @@
                     v.destination.find("video").get(0).play();
                     v.destination.removeClass('ease-fast');
                     var indexMoved = v.sectionsMoved.length;
-                    console.log(indexMoved)
                     transformContainer(v.destination, 'translate3d(0px, ' + yAxis + 'vh, -' + zAxis + 'px) scaleX(' + scale + ')', v.animated);
                     v.destination.attr('data-order', zAxis);
                     v.sectionsToMove.each(function(){
@@ -1021,7 +1014,6 @@
 
             nav.addClass(options.navigation.position);
 
-            console.log('length', $('.pp-section').length);
             for(var cont = 0; cont < $('.pp-section').length; cont++){
                 var link = '';
                 if(options.anchors.length){

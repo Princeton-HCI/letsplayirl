@@ -6,7 +6,7 @@ $(document).ready(function() {
         anchors: ['index', 'snow-show', 'moo-mission', 'pirate-paws', 'fast-face', 'feature-films', 'spooky-spirits', 'grateful-garden', 'cloud-doodle', 'compurrsers', 'petpet', 'research'],
         sectionsColor: ['#5b4abb', '#30c7f4', '#705ff1', '#e9abaa', '#f17e58', '#00d0c7', '#00d0c6', '#5ac477', '#54a4ff', '#d493f5', '#00d0c6', '#00d0c6'],
         loopTop: true,
-        loopBottom: true
+        loopBottom: true,
     });
     $("video").click( function (){
         if( $(this).prop('muted') )
